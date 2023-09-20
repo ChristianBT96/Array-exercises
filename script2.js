@@ -119,17 +119,18 @@ console.log("DONE")
 console.log("EXERCISE 5")
 
 
-const myColor = ["Red", "Green", "White", "Black"];
+const myColors = ["Red", "Green", "White", "Black"];
 
 const joinString = function (unJoinedString) {
     return unJoinedString.join("-_-")
 }
-// .join(separator)
+
+console.log(joinString(myColors))
 // .toString(separator)
-console.log(joinString(myColor))
-console.log(myColor.join())
-console.log(myColor.toString())
-console.log(myColor.join("+"))
+// .join(separator)
+console.log(myColors.join())
+console.log(myColors.toString())
+console.log(myColors.join("+"))
 
 
 console.log("DONE")
@@ -157,6 +158,26 @@ console.log("EXERCISE 6")
 // console.log(result.join(""))
 // // if () checks if i-1 and 1 both are even numbers
 // // is true insert "-" else just insert the number and then add 1 to i and checks the next position
+// // ALT
+
+function insertDashesBetweenEvens(inputNumber) {
+    const numbersToString = inputNumber.toString();
+    let result = ""
+    for (let i; i < numbersToString.length; i++) {
+        const currentDigit = parseInt(numbersToString[i]);
+        if (currentDigit % 2 === 0 && i > 0) {
+            result += "-";
+        }
+        result += currentDigit.toString();
+    }
+
+    return result;
+}
+
+console.log(insertDashesBetweenEvens(39456972345))
+console.log(insertDashesBetweenEvens(348956793846))
+console.log(insertDashesBetweenEvens(1230965488832))
+console.log(insertDashesBetweenEvens(22522544))
 
 console.log("DONE")
 //DONE
