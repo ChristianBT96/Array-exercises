@@ -163,9 +163,10 @@ console.log("EXERCISE 6")
 function insertDashesBetweenEvens(inputNumber) {
     const numbersToString = inputNumber.toString();
     let result = ""
-    for (let i; i < numbersToString.length; i++) {
+    for (let i = 0; i < numbersToString.length; i++) {
         const currentDigit = parseInt(numbersToString[i]);
-        if (currentDigit % 2 === 0 && i > 0) {
+        const previousDigit = parseInt(numbersToString[i - 1]);
+        if (currentDigit % 2 === 0 && previousDigit % 2 === 0)  {
             result += "-";
         }
         result += currentDigit.toString();
@@ -174,10 +175,7 @@ function insertDashesBetweenEvens(inputNumber) {
     return result;
 }
 
-console.log(insertDashesBetweenEvens(39456972345))
-console.log(insertDashesBetweenEvens(348956793846))
-console.log(insertDashesBetweenEvens(1230965488832))
-console.log(insertDashesBetweenEvens(22522544))
+console.log(insertDashesBetweenEvens(55428876912342))
 
 console.log("DONE")
 //DONE
@@ -186,7 +184,6 @@ console.log("DONE")
 // Exercise 7
 // 7. Write a JavaScript program to sort the items of an array.
 console.log("EXERCISE 7")
-
 // Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 
