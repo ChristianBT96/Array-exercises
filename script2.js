@@ -169,7 +169,7 @@ console.log("EXERCISE 6")
 // Return Result: After the loop is complete, the result string will have dashes inserted between even digits. Return the result as the output of the function.
 function insertDashesBetweenEvens(inputNumber) {
     const numbersToString = inputNumber.toString();
-    let result = ""
+    let result = numbersToString[0]
     for (let i = 0; i < numbersToString.length; i++) {
         const currentDigit = parseInt(numbersToString[i]);
         const previousDigit = parseInt(numbersToString[i - 1]);
