@@ -158,8 +158,15 @@ console.log("EXERCISE 6")
 // console.log(result.join(""))
 // // if () checks if i-1 and 1 both are even numbers
 // // is true insert "-" else just insert the number and then add 1 to i and checks the next position
-// // ALT
-
+// // ALT solution
+// How to approach the problem:
+// Input Conversion: Start by converting the input number to a string. This makes it easier to work with individual digits.
+// Initialize Result: Initialize a result string with the first digit of the input number since you don't want a dash before the first digit.
+// Loop Through Digits: Use a loop to iterate through the digits of the input number, starting from the second digit (index 1) because you've already included the first digit in the result.
+// Check Even Digits: For each digit in the loop, convert it to an integer and check if it's even (i.e., divisible by 2).
+// Insert Dash Between Evens: If the current digit is even and the previous digit (found by accessing numbersToString[i - 1]) is also even, then insert a dash in the result.
+// Append Current Digit: Regardless of whether a dash was inserted, always append the current digit to the result.
+// Return Result: After the loop is complete, the result string will have dashes inserted between even digits. Return the result as the output of the function.
 function insertDashesBetweenEvens(inputNumber) {
     const numbersToString = inputNumber.toString();
     let result = ""
